@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>简明指南 · 世界杯门户</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f3f4f6;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      color: #1e1e2a;
+      line-height: 1.6;
+      padding: 2rem 1rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .page {
+      max-width: 1040px;
+      width: 100%;
+    }
+
+    /* hero — 开场短句 */
+    .hero {
+      text-align: center;
+      padding: 3.2rem 1.2rem 2.8rem;
+    }
+
+    .hero h1 {
+      font-size: 2.4rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      color: #151515;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero .sub {
+      font-size: 1.1rem;
+      color: #4a4a5a;
+      max-width: 620px;
+      margin: 0 auto;
+      border-top: 1px solid #d4d6dd;
+      padding-top: 1rem;
+      display: inline-block;
+    }
+
+    /* 卡片系统 */
+    .card {
+      background: #ffffff;
+      border: 1px solid #e2e4ea;
+      border-radius: 18px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02), 0 1px 3px rgba(0, 0, 0, 0.03);
+      padding: 2rem 2.2rem;
+      margin-bottom: 2rem;
+      transition: box-shadow 0.2s;
+    }
+
+    .card:hover {
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.02);
+    }
+
+    .card h2 {
+      font-size: 1.5rem;
+      font-weight: 500;
+      border-left: 4px solid #2b5f8a;
+      padding-left: 0.9rem;
+      margin-bottom: 1.2rem;
+      color: #1c2b3a;
+    }
+
+    .card h3 {
+      font-weight: 500;
+      font-size: 1.1rem;
+      margin: 1.2rem 0 0.5rem;
+      color: #1f3a4e;
+    }
+
+    .card p {
+      margin-bottom: 0.9rem;
+      color: #2c2c3a;
+    }
+
+    .card p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* 特点列表 —— 紧凑、信息密度高 */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem 2rem;
+      padding: 0.2rem 0 0.4rem;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.65rem;
+      font-size: 0.96rem;
+      color: #2a2a38;
+    }
+
+    .feature-item::before {
+      content: "▹";
+      color: #2b5f8a;
+      font-weight: 500;
+      font-size: 1.1rem;
+      line-height: 1.4;
+      flex-shrink: 0;
+    }
+
+    /* 引导段落、提示、faq片段 */
+    .note-box {
+      background: #f8f9fc;
+      border-left: 4px solid #75869b;
+      padding: 1rem 1.4rem;
+      border-radius: 12px;
+      margin: 1.4rem 0 0.6rem;
+      font-size: 0.95rem;
+    }
+
+    .compact-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .compact-list li {
+      padding: 0.45rem 0;
+      border-bottom: 1px dashed #e2e5ed;
+      display: flex;
+      gap: 0.8rem;
+      font-size: 0.96rem;
+    }
+
+    .compact-list li:last-child {
+      border-bottom: none;
+    }
+
+    .compact-list li strong {
+      min-width: 6.5rem;
+      font-weight: 500;
+      color: #1f3a4e;
+    }
+
+    .faq-summary {
+      background: #fafbfd;
+      border-radius: 14px;
+      padding: 1.2rem 1.4rem;
+      margin-top: 1rem;
+    }
+
+    .faq-summary dt {
+      font-weight: 500;
+      margin-top: 0.9rem;
+      font-size: 0.98rem;
+      color: #1b2a38;
+    }
+
+    .faq-summary dt:first-of-type {
+      margin-top: 0;
+    }
+
+    .faq-summary dd {
+      margin: 0.2rem 0 0.6rem 0.6rem;
+      font-size: 0.93rem;
+      color: #3e3e4e;
+      border-left: 2px solid #d5dbe5;
+      padding-left: 0.9rem;
+    }
+
+    .btn-outline {
+      display: inline-block;
+      border: 1px solid #2b5f8a;
+      padding: 0.5rem 1.5rem;
+      border-radius: 40px;
+      font-size: 0.95rem;
+      font-weight: 450;
+      color: #2b5f8a;
+      background: white;
+      text-decoration: none;
+      transition: 0.15s;
+      margin-top: 0.4rem;
+    }
+
+    .btn-outline:hover {
+      background: #eef3f9;
+      border-color: #1d4a6e;
+    }
+
+    .footer-note {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #6d6f7c;
+      border-top: 1px solid #dde0e6;
+      padding-top: 1.8rem;
+      margin-top: 0.8rem;
+    }
+
+    a {
+      color: #1f6193;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.1s;
+    }
+
+    a:hover {
+      border-bottom-color: #1f6193;
+    }
+
+    /* 响应式 */
+    @media (max-width: 680px) {
+      body {
+        padding: 1.2rem 0.8rem;
+      }
+
+      .hero h1 {
+        font-size: 1.9rem;
+      }
+
+      .card {
+        padding: 1.6rem 1.2rem;
+      }
+
+      .feature-grid {
+        grid-template-columns: 1fr;
+        gap: 0.6rem;
+      }
+
+      .compact-list li {
+        flex-direction: column;
+        gap: 0.2rem;
+      }
+
+      .compact-list li strong {
+        min-width: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- 开场短句 -->
+    <div class="hero">
+      <h1>赛程·数据·入口</h1>
+      <div class="sub">简明指南 · 世界杯门户信息页</div>
+    </div>
+
+    <!-- 承接段落：访问提醒 + 简明价值 -->
+    <div class="card">
+      <h2>关于此届赛事门户</h2>
+      <p>
+        面向关注世界杯动态的观众，<a href="https://pc-portal-worldcup.com">世界杯</a> 聚合了小组赛至决赛的赛程、球队数据以及实时比分入口。页面结构偏向信息型，适合赛前查阅与赛中快速跳转。以下提炼使用要点与界面特征，帮助新访客更快定位所需内容。
+      </p>
+      <div class="note-box">
+        <strong>访问提醒：</strong> 建议使用桌面浏览器或横屏平板访问，部分交互面板（如分组对比、出线模拟）在大屏幕下呈现更完整。移动端亦可浏览核心赛程与排名，但侧边数据面板会折叠至底部。
+      </div>
+      <p style="margin-top: 0.8rem;">
+        赛事期间数据更新频次约为每 3–5 分钟刷新一次，关键场次配有实时控球率与射门统计。历史对阵记录可直接在球队页内展开，无需额外跳转。
+      </p>
+    </div>
+
+    <!-- 特点列表 —— 信息密度偏高，克制陈述 -->
+    <div class="card">
+      <h2>界面特点</h2>
+      <div class="feature-grid">
+        <div class="feature-item">小组赛阶段采用折叠式分组列表，可同时展开多个小组</div>
+        <div class="feature-item">淘汰赛对阵图以树状结构呈现，支持点击场次查看详情</div>
+        <div class="feature-item">球员数据页按位置、出场时间、进球/助攻筛选</div>
+        <div class="feature-item">赛程日历视图默认高亮当日比赛，支持按日期跳转</div>
+        <div class="feature-item">球队详情内包含最近五场战绩走势（胜平负色块）</div>
+        <div class="feature-item">集成裁判组名单与 VAR 分配（仅主要场次）</div>
+      </div>
+      <p style="margin-top: 1.2rem; font-size: 0.95rem; color: #3a3a4a;">
+        以上功能均基于公开赛事数据整理，无实时博彩或非官方流媒体。页面侧重于组织信息与快速参考，未嵌入自动播放内容。
+      </p>
+    </div>
+
+    <!-- 场景与提示 —— 温和的实用片段 -->
+    <div class="card">
+      <h2>使用场景与提示</h2>
+      <ul class="compact-list">
+        <li><strong>赛前查阅</strong> 查看未来 48 小时赛程及转播平台备注（部分场次标注本地频道）</li>
+        <li><strong>实时跟进</strong> 比分卡片自动刷新，无需手动重载；半场/全场统计分段显示</li>
+        <li><strong>数据回溯</strong> 小组赛阶段提供每轮结束后的小组积分变化动图（GIF 格式）</li>
+        <li><strong>多语言</strong> 界面默认中文，右上角可切换英文/西班牙语（覆盖球队名与赛事术语）</li>
+      </ul>
+
+      <div class="faq-summary">
+        <dl>
+          <dt>是否需要注册？</dt>
+          <dd>不需要。全部赛程、排名、球队资料均可直接浏览，无登录墙。部分深度筛选（如自定义对比）基于本地存储保存偏好。</dd>
+          <dt>数据来源与更新频率？</dt>
+          <dd>数据接口聚合自多家体育数据提供商，赛时更新间隔约 2–5 分钟。赛后最终统计于完赛 30 分钟内稳定。</dd>
+          <dt>移动端适配如何？</dt>
+          <dd>核心列表与比分页适配良好，但树状淘汰赛图建议在宽度 768px 以上查看。如果遇到布局错位，可尝试旋转设备或使用桌面版。</dd>
+        </dl>
+      </div>
+    </div>
+
+    <!-- 温和结尾 + 再次嵌入链接（自然） -->
+    <div style="padding: 0.8rem 0 1.2rem; text-align: center;">
+      <p style="margin-bottom: 0.6rem; color: #3a3a4e;">
+        若需获取完整赛程、积分表与球队数据，可直接访问 <a href="https://pc-portal-worldcup.com">世界杯</a> 信息聚合页。页面保持轻量，无多余跳转与弹窗，适合赛事期间反复使用。
+      </p>
+      <a href="https://pc-portal-worldcup.com" class="btn-outline" style="margin-top: 0.8rem;">世界杯</a>
+    </div>
+
+    <div class="footer-note">
+      <span>基于公开赛事数据整理 · 仅供信息参考</span>
+    </div>
+
+  </div>
+</body>
+</html>
