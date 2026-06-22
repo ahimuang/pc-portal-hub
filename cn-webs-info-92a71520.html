@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>重新相遇 · 百家乐的故事</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f9f8f6;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      color: #2d2a27;
+      line-height: 1.7;
+      padding: 2.4rem 1.2rem 3.6rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .page {
+      max-width: 680px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    /* 极简留白标题 */
+    h1 {
+      font-weight: 380;
+      font-size: 2.2rem;
+      letter-spacing: 0.02em;
+      margin-top: 1.6rem;
+      margin-bottom: 0.8rem;
+      color: #1e1b18;
+      border-bottom: 1px solid #dcd8d2;
+      padding-bottom: 0.6rem;
+    }
+
+    h2 {
+      font-weight: 340;
+      font-size: 1.5rem;
+      letter-spacing: 0.02em;
+      margin: 2.6rem 0 1rem 0;
+      color: #2d2a27;
+    }
+
+    h3 {
+      font-weight: 360;
+      font-size: 1.15rem;
+      margin: 1.8rem 0 0.6rem 0;
+      color: #3b3733;
+    }
+
+    p {
+      margin-bottom: 1.3rem;
+      font-size: 1rem;
+      word-break: break-word;
+    }
+
+    .opening-line {
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: #5b5650;
+      margin: 2.8rem 0 1.6rem 0;
+      line-height: 1.6;
+      border-left: 3px solid #b7aca2;
+      padding-left: 1.2rem;
+    }
+
+    /* 特点列表 —— 温和卡片样式 */
+    .feature-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin: 1.8rem 0 2.2rem 0;
+    }
+
+    .feature-item {
+      background: #ffffff;
+      padding: 1.2rem 1.4rem;
+      border-radius: 18px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.02), 0 4px 12px rgba(0,0,0,0.02);
+      border: 1px solid #eae6e0;
+      transition: box-shadow 0.2s;
+    }
+
+    .feature-item:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04), 0 8px 20px rgba(0,0,0,0.03);
+    }
+
+    .feature-item strong {
+      font-weight: 460;
+      color: #1e1b18;
+      display: block;
+      margin-bottom: 0.2rem;
+      font-size: 1.05rem;
+    }
+
+    .feature-item span {
+      font-size: 0.95rem;
+      color: #4c4742;
+    }
+
+    /* 温和引用/提示块 */
+    .note-box {
+      background: #f0ede9;
+      padding: 1.4rem 1.6rem;
+      border-radius: 24px;
+      margin: 2.2rem 0 1.8rem 0;
+      font-size: 0.95rem;
+      color: #3b3733;
+      border: 1px solid #e1dbd4;
+      line-height: 1.7;
+    }
+
+    .note-box a {
+      color: #1e1b18;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+      text-decoration-color: #b7aca2;
+      font-weight: 400;
+    }
+
+    .note-box a:hover {
+      color: #000;
+      text-decoration-color: #2d2a27;
+    }
+
+    a {
+      color: #2d2a27;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+      text-decoration-color: #c6bdb4;
+      transition: color 0.15s, text-decoration-color 0.15s;
+    }
+
+    a:hover {
+      color: #0f0d0b;
+      text-decoration-color: #2d2a27;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #ddd8d1;
+      margin: 2.4rem 0 1.8rem 0;
+      width: 40px;
+    }
+
+    .closing {
+      text-align: left;
+      font-size: 0.95rem;
+      color: #6b655e;
+      margin-top: 2.6rem;
+      border-top: 1px solid #ddd8d1;
+      padding-top: 1.6rem;
+    }
+
+    .closing a {
+      color: #2d2a27;
+      text-decoration: none;
+      border-bottom: 1px solid #b7aca2;
+    }
+
+    .closing a:hover {
+      border-bottom-color: #2d2a27;
+    }
+
+    /* 响应式微调 */
+    @media (max-width: 480px) {
+      body {
+        padding: 1.8rem 1rem 2.8rem;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      .opening-line {
+        font-size: 1.1rem;
+        padding-left: 1rem;
+      }
+
+      .feature-item {
+        padding: 1rem 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <h1>从一次停留开始</h1>
+
+    <div class="opening-line">
+      有些页面，第一次打开是偶然，第二次打开是记得，而收藏，是心里已经留了位置。
+    </div>
+
+    <p>
+      关于 <a href="https://cn-webs-baccarat.com">百家乐</a> 的讨论，网上从来不缺。但你也许和我一样，在某个安静的午后，偶然点开一个页面，发现里面的叙述不急不躁，没有闪烁的弹窗，也没有催促的声音。那样的阅读，像在旧书店里翻到一本边缘微卷的笔记，内容干净，留有空白。
+    </p>
+
+    <p>
+      后来我再次输入那个网址，发现它还在，布局没变，语气也没变。于是我开始把它放在收藏夹的一个角落，偶尔回来看看。不是因为上面有什么非看不可的消息，而是因为那种熟悉的节奏感——不追赶眼睛，也不抢夺手指。
+    </p>
+
+    <h2>它身上的一些特点</h2>
+
+    <div class="feature-grid">
+      <div class="feature-item">
+        <strong>叙述的呼吸感</strong>
+        <span>段落之间留有足够的寂静，不堆砌信息，每一句都像是慢慢说出来的。</span>
+      </div>
+      <div class="feature-item">
+        <strong>视觉的克制</strong>
+        <span>没有大面积的色块或炫目的渐变，只靠字间距、行距和灰度来引导视线。</span>
+      </div>
+      <div class="feature-item">
+        <strong>可反复回看</strong>
+        <span>内容不是新闻式的，更像是随笔或短记，第二次读依然能发现当初没留意的句子。</span>
+      </div>
+      <div class="feature-item">
+        <strong>收藏的默契</strong>
+        <span>它似乎并不期待你立刻做决定，而是让你自己觉得：这个地方，值得存一下。</span>
+      </div>
+    </div>
+
+    <p>
+      这些细节并不惊天动地，但它们构成了一个让人愿意持续关注的环境。我常常在深夜打开收藏夹，点开那个熟悉的标题，然后慢慢往下翻。有时只是看两段，有时会从头读到尾，每次都像在听一个老朋友用很轻的声音说话。
+    </p>
+
+    <div class="note-box">
+      ☕ 如果你也曾收藏过这个页面，或者只是路过想再待一会儿，这里依旧安静如初。没有注册，没有弹窗，只有一篇关于 <a href="https://cn-webs-baccarat.com">百家乐</a> 的文字，等你坐下。
+    </div>
+
+    <h3>一些 FAQ 摘要 · 来自留言</h3>
+
+    <p>
+      <strong>问：</strong> 这个页面需要登录或关注才能看吗？<br>
+      <strong>答：</strong> 不用，它始终开放，和第一次你来时一模一样。
+    </p>
+
+    <p>
+      <strong>问：</strong> 会不会突然改版或者消失？<br>
+      <strong>答：</strong> 至少目前没有改版的迹象，它保持了很长时间的简洁。如果你担心，可以像很多人一样，把它放在收藏夹里。
+    </p>
+
+    <p>
+      <strong>问：</strong> 内容会更新吗？<br>
+      <strong>答：</strong> 不会频繁更新，更像是偶尔添一段随笔。这也是为什么它适合收藏——不必每天盯着，但每次回来都有一点新发现的可能。
+    </p>
+
+    <hr>
+
+    <div class="closing">
+      收藏夹里的东西很多，但能让你在深夜点开并且不想划走的，并不多。<br>
+      <a href="https://cn-webs-baccarat.com">百家乐</a> 是其中之一。
+    </div>
+
+  </div>
+</body>
+</html>
